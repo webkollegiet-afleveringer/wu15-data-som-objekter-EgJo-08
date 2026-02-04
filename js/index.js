@@ -20,7 +20,7 @@ first.append(copy)
 
 
 let icon2 = document.createElement("img")
-icon2.src = hero.icon
+icon2.src = hero.icon2
 first.append(icon2)
 
 let services2 = document.querySelector(".services")
@@ -29,7 +29,7 @@ services.forEach(service => {
     const div = document.createElement("div")
     let illustration = document.createElement("img")
 
-    illustration.src = service.images
+    illustration.src = service.illustration
 
     div.appendChild(illustration)
 
@@ -58,6 +58,40 @@ services.forEach(service => {
     div.appendChild(linktext)
 
 })
+
+let facilities2 = document.querySelector(".facilities")
+
+let header = document.createElement("h2")
+header.textContent = facilities.headline
+facilities2.append(header)
+
+
+facilities.options.forEach(facility => {
+    const div = document.createElement("div")
+    let illustration = document.createElement("img")
+
+    illustration.src = facility.icon
+
+    div.appendChild(illustration)
+
+    facilities2.appendChild(div)
+
+    let headline = document.createElement("h2")
+
+    headline.textContent = facility.headline
+
+    div.appendChild(headline)
+    facilities2.appendChild(div)
+
+    let text = document.createElement("p")
+
+    text.textContent = facility.text
+
+    div.appendChild(text)
+
+
+})
+
 
 
 services.forEach(service => console.log(service.headline))
