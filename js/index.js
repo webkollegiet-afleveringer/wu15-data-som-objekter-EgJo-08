@@ -144,5 +144,38 @@ advantages2.innerHTML = advantages.map(advant => `
     </div>`)
     .join('');
 
+    const footerContainer = document.querySelector(".footer");
+
+footerContainer.innerHTML = `
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2>${footer.brand.name}</h2>
+      <h1>${footer.brand.slogan}</h1>
+    </div>
+
+    <div class="footer-sections">
+      ${footer.sections.map(section => `
+        <div class="footer-section">
+          <h4>${section.title}</h4>
+          <ul>
+            ${section.links.map(link => `
+              <li>${link}</li>
+            `).join("")}
+          </ul>
+        </div>
+      `).join("")}
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>${footer.bottom.copyright}</p>
+    <ul>
+      ${footer.bottom.links.map(link => `
+        <li>${link}</li>
+      `).join("")}
+    </ul>
+  </div>
+`;
+
 
 services.forEach(service => console.log(service.headline))
