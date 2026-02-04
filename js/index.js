@@ -134,9 +134,15 @@ sites.places.forEach(site => {
 
 })
 
+const advantages2 = document.querySelector(".advantages")
 
-
-
+advantages2.innerHTML = advantages.map(advant => `
+    <div>
+    <img src="${advant.icon}">
+    <h2>${advant.headline}</h2>
+    <p>${advant.text}</p>
+    </div>`)
+    .join('');
 
 
 services.forEach(service => console.log(service.headline))
