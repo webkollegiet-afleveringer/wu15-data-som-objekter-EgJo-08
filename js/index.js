@@ -93,5 +93,50 @@ facilities.options.forEach(facility => {
 })
 
 
+let sites2 = document.querySelector(".sites")
+
+let siteheader = document.createElement("h2")
+siteheader.textContent = sites.headline
+sites2.append(siteheader)
+
+let sitetext = document.createElement("p")
+sitetext.textContent = sites.text
+sites2.append(sitetext)
+
+let sitebtnicon = document.createElement("img")
+sitebtnicon.src = sites.btnicon
+sites2.append(sitebtnicon)
+
+
+sites.places.forEach(site => {
+    const div = document.createElement("div")
+    let illustration = document.createElement("img")
+
+    illustration.src = site.img
+
+    div.appendChild(illustration)
+
+    sites2.appendChild(div)
+
+    let headline = document.createElement("h3")
+
+    headline.textContent = site.name
+
+    div.appendChild(headline)
+    sites2.appendChild(div)
+
+    let headline2 = document.createElement("h3")
+
+    headline2.textContent = site.city
+
+    div.appendChild(headline2)
+
+
+})
+
+
+
+
+
 
 services.forEach(service => console.log(service.headline))
