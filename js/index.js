@@ -17,11 +17,24 @@ let copy = document.createElement("p")
 copy.textContent = hero.copy
 first.append(copy)
 
-
+const div = document.createElement("div")
+div.classList.add("hero-div")
 
 let icon2 = document.createElement("img")
-icon2.src = hero.icon2
+icon2.src = hero.icon
 first.append(icon2)
+
+
+first.append(div)
+div.appendChild(head2)
+div.appendChild(copy)
+div.appendChild(icon2)
+
+
+first.classList.add("hero-container");
+img.classList.add("hero-image");
+head2.classList.add("hero-headline");
+copy.classList.add("hero-copy");
 
 let services2 = document.querySelector(".services")
 
@@ -56,6 +69,11 @@ services.forEach(service => {
     linktext.href = service.url
 
     div.appendChild(linktext)
+    div.classList.add("service-card");
+    illustration.classList.add("service-img");
+    headline.classList.add("service-title");
+    text.classList.add("service-text");
+    linktext.classList.add("service-link");
 
 })
 
@@ -88,6 +106,10 @@ facilities.options.forEach(facility => {
     text.textContent = facility.text
 
     div.appendChild(text)
+    div.classList.add("facility-card");
+    illustration.classList.add("facility-icon");
+    headline.classList.add("facility-title");
+    text.classList.add("facility-text");
 
 
 })
@@ -131,20 +153,23 @@ sites.places.forEach(site => {
 
     div.appendChild(headline2)
 
-
+    div.classList.add("site-card");
+    illustration.classList.add("site-img");
+    headline.classList.add("site-name");
+    headline2.classList.add("site-city");
 })
 
 const advantages2 = document.querySelector(".advantages")
 
 advantages2.innerHTML = advantages.map(advant => `
-    <div>
-    <img src="${advant.icon}">
-    <h2>${advant.headline}</h2>
-    <p>${advant.text}</p>
+    <div class="advantage-card">
+    <img class="advantage-icon" src="${advant.icon}">
+    <h2 class="advantage-title">${advant.headline}</h2>
+    <p class="advantage-text">${advant.text}</p>
     </div>`)
     .join('');
 
-    const footerContainer = document.querySelector(".footer");
+const footerContainer = document.querySelector(".footer");
 
 footerContainer.innerHTML = `
   <div class="footer-top">
@@ -176,6 +201,6 @@ footerContainer.innerHTML = `
     </ul>
   </div>
 `;
-
+footerContainer.classList.add("footer-container");
 
 services.forEach(service => console.log(service.headline))
