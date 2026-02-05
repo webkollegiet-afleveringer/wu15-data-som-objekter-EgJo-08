@@ -1,0 +1,231 @@
+body {
+ 
+  margin: 0;
+  color: #222;
+
+}
+
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 200px;
+  padding: 80px;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+}
+
+.hero-headline {
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.hero-copy {
+  color: #666;
+  margin-top: 16px;
+}
+
+.hero-div{
+    grid-area:  2 / 1;
+    width: 40%;
+    position: relative;
+    bottom: 8em;
+    left: 3%;
+    background-color: #ffffff;
+}
+
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 80px;
+}
+
+.service-card img {
+  width: 60px;
+}
+
+.service-title {
+  font-size: 18px;
+  margin: 16px 0 8px;
+}
+
+.service-text {
+  font-size: 14px;
+  color: #666;
+}
+
+.service-link {
+  color: #f36;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+
+.facilities {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.facilities > h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+
+.facilities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  grid-template-rows: 1fr 1fr;
+}
+
+.facility-card {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s ease;
+  grid-area: 2;
+}
+
+
+
+.facility-icon {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.facility-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.facility-text {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+}
+
+
+
+.sites {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.sites > h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  grid-area: 2 / 1;
+}
+
+.sites > p {
+  margin-bottom: 30px;
+  color: #555;
+  grid-area: 2 / 1;
+  position: relative;
+  top: 15em;
+}
+
+
+.sites {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 500px;
+}
+
+.site-card {
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  transition: 0.3s ease;
+  grid-area: 2 / span 3;
+}
+
+
+.site-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.site-name {
+  font-size: 20px;
+  margin: 10px 0 5px 10px;
+}
+
+.site-city {
+  font-size: 16px;
+  color: #777;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 80px;
+}
+
+.advantage-icon {
+  width: 40px;
+}
+
+
+.footer-container {
+  padding: 80px;
+  border-top: 1px solid #eee;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+
+.footer-brand h1 {
+  font-size: 32px;
+}
+
+.footer-sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin: 8px 0;
+  color: #666;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #888;
+}
+
+.footer-bottom ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
